@@ -1,4 +1,9 @@
 body {
+  max-width: 100vw;
+  min-width: 100vw;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
@@ -55,14 +60,17 @@ body {
 .info-component {
   display: flex;
   flex-direction: row;
-  background: #1F4C88;
   justify-content: center; }
   .info-component .left, .info-component .right {
     padding: 15px;
     color: white; }
     .info-component .left svg, .info-component .right svg {
-      fill: white; }
+      fill: #1F4C88;
+      min-width: 146px;
+      max-width: 40%; }
   .info-component .right {
+    color: #1F4C88;
+    font-size: 4em;
     display: flex;
     flex-direction: column;
     justify-content: center;

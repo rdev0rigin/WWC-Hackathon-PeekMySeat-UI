@@ -1,7 +1,10 @@
 {
-  "name": "team-awesome-website",
-  "version": "0.1.0",
-  "private": true,
+  "name": "seat-peek",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authos": [
+    "Rob Rex Beatie (rdev1163@outlook.com)"
+  ],
   "scripts": {
     "start": "sass ./src/index.scss --watch & react-scripts-ts start",
     "build": "react-scripts-ts build",

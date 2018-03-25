@@ -17,7 +17,6 @@
 }
 
 .seat-component {
-  //position: relative;
 
   .icon-wrapper {
     position: relative;
@@ -31,9 +30,8 @@
         transform: translate(-50%, -50%);
         width: 60%;
         height: 60%;
-      svg {
-      }
     }
+
     svg {
       position: absolute;
       top: 50%;
@@ -48,6 +46,5 @@
         fill: $trimet-orange;
       }
     }
-
   }
 }

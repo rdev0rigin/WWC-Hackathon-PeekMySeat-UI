@@ -1,10 +1,17 @@
-import * as React from "react";
-import {SVGS} from "../../assets/svgs.react";
-import {Subscription} from '@reactivex/rxjs';
-import {onSeatChange$} from "../../services/firebase.service";
-import {ReactElement} from "react";
+import * as React from 'react';
+import { ReactElement } from 'react';
+import { SVGS } from '../../assets/svgs.react';
+import { Subscription } from '@reactivex/rxjs';
+import { onSeatChange$ } from '../../services/firebase.service';
 
-export class InfoComponent extends React.Component {
+interface InfoComponentState {
+    dataReady: boolean;
+    percentFull: string;
+}
+
+interface InfoComponentProps {}
+
+export class InfoComponent extends React.Component<InfoComponentProps, InfoComponentState> {
     public state = {
         dataReady: false,
         percentFull: 'calculating'
@@ -38,27 +45,27 @@ export class InfoComponent extends React.Component {
                 <div
                     className="right"
                 >
-                   <h3>
-                       {this.state.dataReady
-                            ? `This bus is ${this.state.percentFull}% full.`
+                    <b>
+                        {this.state.dataReady
+                            ? `${this.state.percentFull}% full`
                             : `Calculating capacity!`
                         }
-                   </h3>
+                    </b>
                 </div>
             </div>
         );
     }
 
-    private percentFull = (seats: {}) => {
+    private percentFull = (seats: {}): string => {
         const seatIDs: string[] = Object.keys(seats);
         const total: number = seatIDs.length;
-        let occupied: any[] = [];
+        let occupied: {}[] = [];
+
         for (let seatId of seatIDs) {
             if (seats[seatId].occupied) {
                 occupied = occupied.concat(seats[seatId]);
             }
         }
-
         return Math.trunc((occupied.length / total) * 100).toString();
-    };
+    }
 }

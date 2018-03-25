@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { onSeatChange$ } from "../../services/firebase.service";
+import { onSeatChange$ } from '../../services/firebase.service';
+import { SeatComponent } from './seat.component';
 import { Subscription } from '@reactivex/rxjs';
-import {ReactElement} from "react";
-import {SeatComponent} from "./seat.component";
+import { ReactElement } from 'react';
 
 interface GridComponentState {
     seats: {
@@ -13,19 +13,17 @@ interface GridComponentState {
     };
 }
 
-interface GridComponentProps {
+interface GridComponentProps {}
 
-}
-
-export class GridCompnent extends React.Component<GridComponentProps, GridComponentState> {
-    public state: any = {
+export class GridComponent extends React.Component<GridComponentProps, GridComponentState> {
+    public state: GridComponentState = {
         seats: {}
     };
     private subscriptions: Subscription;
 
     public componentDidMount(): void {
         this.subscriptions = onSeatChange$()
-            .subscribe((update: any) => {
+            .subscribe((update: {}) => {
                 this.setState({
                     seats: update
                 });
@@ -58,6 +56,7 @@ export class GridCompnent extends React.Component<GridComponentProps, GridCompon
     private renderRightSeats(): ReactElement<HTMLDivElement>[] {
         const seatIDs: string[] = Object.keys(this.state.seats);
         let rightSeats: ReactElement<HTMLDivElement>[] = [];
+
         for (let i = 0; i < seatIDs.length; i++) {
             rightSeats = i % 2 !== 0
                 ? rightSeats.concat(
@@ -77,6 +76,7 @@ export class GridCompnent extends React.Component<GridComponentProps, GridCompon
     private renderLeftSeats(): ReactElement<HTMLDivElement>[] {
         const seatIDs: string[] = Object.keys(this.state.seats);
         let leftSeats: ReactElement<HTMLDivElement>[] = [];
+
         for (let i = 0; i < seatIDs.length; i++) {
             leftSeats = i % 2 === 0
                 ? leftSeats.concat(
@@ -92,5 +92,4 @@ export class GridCompnent extends React.Component<GridComponentProps, GridCompon
         }
         return leftSeats;
     }
-
 }

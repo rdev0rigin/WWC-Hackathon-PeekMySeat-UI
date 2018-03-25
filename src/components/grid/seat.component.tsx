@@ -1,5 +1,5 @@
-import * as React from "react";
-import {SVGS} from "../../assets/svgs.react";
+import * as React from 'react';
+import { SVGS } from '../../assets/svgs.react';
 
 interface SeatComponentProps {
     type: string;
@@ -7,8 +7,7 @@ interface SeatComponentProps {
 }
 
 export const SeatComponent = (props: SeatComponentProps) => {
-    console.log('props', props);
-    const occupiedStyle = props.occupied
+    const occupiedStyle: string = props.occupied
         ? 'occupied'
         : '';
 
@@ -23,7 +22,7 @@ export const SeatComponent = (props: SeatComponentProps) => {
                 >
                     {SVGS.circle}
                     <div
-                        className='handicap-wrapper'
+                        className="handicap-wrapper"
                     >
                         {SVGS.handicap}
                     </div>

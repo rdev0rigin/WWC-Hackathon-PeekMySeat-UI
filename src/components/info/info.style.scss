@@ -1,21 +1,26 @@
 .info-component {
   display: flex;
   flex-direction: row;
-  background: $trimet-blue;
   justify-content: center;
 
   .left, .right {
     padding: 15px;
     color: white;
+
     svg {
-      fill: white;
+      fill: $trimet-blue;
+      min-width: 146px;
+      max-width: 40%;
     }
   }
 
   .left {
-
   }
+
   .right {
+    color: $trimet-blue;
+    font-size: 4em;
+
     display: flex;
     flex-direction: column;
     justify-content: center;

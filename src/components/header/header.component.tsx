@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {SVGS} from "../../assets/svgs.react";
-import {ReactElement} from "react";
+import { SVGS } from '../../assets/svgs.react';
+import { ReactElement } from 'react';
 
-export const HeaderComponent = (props: any): ReactElement<HTMLDivElement> => {
+export const HeaderComponent = (): ReactElement<HTMLDivElement> => {
     return (
         <div
             className="header-component"
@@ -14,5 +14,5 @@ export const HeaderComponent = (props: any): ReactElement<HTMLDivElement> => {
                 {SVGS.seatpEEk}
             </div>
         </div>
-    )
+    );
 };
