@@ -12,7 +12,7 @@ export const FIREBASE_CONFIG = {
 
 export function onSeatChange$(): Observable<any> {
     return Observable.create((observer: Observer<any>) => {
-        // firebase.database();
+        fb.database().goOnline();
         fb.database().ref('/seats').on('value', (update) => {
             observer.next(update.val());
         });
