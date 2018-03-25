@@ -1,3 +1,6 @@
+$trimet-blue: #1F4C88;
+$trimet-orange: #C25034;
+
 body {
   margin: 0;
   padding: 0;
@@ -5,3 +8,5 @@ body {
 }
 
 @import 'components/grid/grid.style';
+@import 'components/header/header.style';
+@import 'components/info/info.style';

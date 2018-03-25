@@ -1,0 +1,22 @@
+.header-component {
+  height: 100px;
+  background: $trimet-blue;
+
+  .logo-wrapper {
+    position: relative;
+    height: 100px;
+    max-width: 100vw;
+
+    svg {
+      position: absolute;
+      fill: white;
+      left: 0;
+    }
+
+    #EE {
+      stroke: $trimet-orange;
+      stroke-width: 12px;
+      fill: none;
+    }
+  }
+}

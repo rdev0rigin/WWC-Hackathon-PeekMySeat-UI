@@ -34,6 +34,38 @@ body {
     transform: translate(-50%, -50%);
     fill: black; }
   .seat-component .icon-wrapper.occupied svg {
-    fill: red; }
+    fill: #C25034; }
+
+.header-component {
+  height: 100px;
+  background: #1F4C88; }
+  .header-component .logo-wrapper {
+    position: relative;
+    height: 100px;
+    max-width: 100vw; }
+    .header-component .logo-wrapper svg {
+      position: absolute;
+      fill: white;
+      left: 0; }
+    .header-component .logo-wrapper #EE {
+      stroke: #C25034;
+      stroke-width: 12px;
+      fill: none; }
+
+.info-component {
+  display: flex;
+  flex-direction: row;
+  background: #1F4C88;
+  justify-content: center; }
+  .info-component .left, .info-component .right {
+    padding: 15px;
+    color: white; }
+    .info-component .left svg, .info-component .right svg {
+      fill: white; }
+  .info-component .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,24 @@
+.info-component {
+  display: flex;
+  flex-direction: row;
+  background: $trimet-blue;
+  justify-content: center;
+
+  .left, .right {
+    padding: 15px;
+    color: white;
+    svg {
+      fill: white;
+    }
+  }
+
+  .left {
+
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
