@@ -1,6 +1,8 @@
-# Women Who Code - Team Awesome
+# Women Who Code - SeatPeek
+
 > A Smart Bus Project's Webside React UI
 
+A way to gauge the crowd quality of a public bus.
 
 ## Create React App Readme Below...
 
