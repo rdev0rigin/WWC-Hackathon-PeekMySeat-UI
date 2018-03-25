@@ -1,0 +1,53 @@
+.grid-component {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+
+  .grid_left, .grid_right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div {
+    margin: 0 0 10px 0;
+  }
+}
+
+.seat-component {
+  //position: relative;
+
+  .icon-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    .handicap-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 60%;
+      svg {
+      }
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: black;
+    }
+
+    &.occupied {
+
+      svg {
+        fill: red;
+      }
+    }
+
+  }
+}

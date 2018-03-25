@@ -1,14 +1,7 @@
 import * as React from "react";
 import "./App.css";
-import {GridCompnent} from "./components/grid.compnent";
+import {GridCompnent} from "./components/grid/grid.compnent";
 import * as fb from 'firebase';
-import * as firebase from 'firebase/app';
-import {FIREBASE_CONFIG} from "./services/firebase.service";
-
-// Initialize Firebase
-
-const logo = require("./logo.svg");
-
 
 class App extends React.Component {
     public state = {
@@ -20,7 +13,7 @@ class App extends React.Component {
     }
 
     public async componentDidMount(): Promise<any> {
-        firebase.initializeApp(FIREBASE_CONFIG);
+
         fb.database().goOnline();
 
     }
@@ -32,7 +25,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="App container">
                 <div>
                     Header
                 </div>
