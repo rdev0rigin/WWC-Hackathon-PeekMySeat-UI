@@ -63,6 +63,7 @@ export class GridComponent extends React.Component<GridComponentProps, GridCompo
                     (
                         <SeatComponent
                             key={seatIDs[i]}
+                            id={seatIDs[i]}
                             type={this.state.seats[seatIDs[i]].type}
                             occupied={this.state.seats[seatIDs[i]].occupied}
                         />
@@ -83,6 +84,7 @@ export class GridComponent extends React.Component<GridComponentProps, GridCompo
                     (
                         <SeatComponent
                             key={seatIDs[i]}
+                            id={seatIDs[i]}
                             type={this.state.seats[seatIDs[i]].type}
                             occupied={this.state.seats[seatIDs[i]].occupied}
                         />

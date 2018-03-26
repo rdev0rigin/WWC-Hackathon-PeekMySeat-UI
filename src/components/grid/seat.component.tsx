@@ -4,6 +4,7 @@ import { SVGS } from '../../assets/svgs.react';
 interface SeatComponentProps {
     type: string;
     occupied: boolean;
+    id?: string;
 }
 
 export const SeatComponent = (props: SeatComponentProps) => {
@@ -11,11 +12,12 @@ export const SeatComponent = (props: SeatComponentProps) => {
         ? 'occupied'
         : '';
 
+    // todo make contract with hardware
     return (
         <div
             className="seat-component"
         >
-            {props.type === 'handicap'
+            { props.type === 'handicap'
                 ? (
                 <div
                     className={'icon-wrapper ' + occupiedStyle}
