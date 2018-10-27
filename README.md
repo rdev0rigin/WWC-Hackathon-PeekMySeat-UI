@@ -22,6 +22,10 @@ The commercial campaign put together by KatieOfCode, Sophia, Jala. This is the w
 
 This repo is just a clone of the **GitLab** Project.
 
+# More Resources
+[WWC: A Look Back](https://medium.com/@WWCodePortland/a-look-back-at-the-women-who-code-portland-iot-hackathon-2018-e7ddf225bbf1)
+[Intel01: On WWC Hackathon](https://01.org/blogs/2018/inspiration-from-local-iot-hackathon)
+
 ## Dev Install
 ```shell
 cd {project DIR}
